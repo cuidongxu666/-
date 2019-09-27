@@ -28,7 +28,7 @@
 # y_predict=knn.predict(x.reshape[1,-1]) #返回数组；新版所有传入数据比为二维数组
 # y_predict[0]
 
-#封装
+#封装knn代码
 import numpy as np
 from math import sqrt
 from collections import Counter
@@ -71,10 +71,10 @@ class KNNClassifier:
         y_predict=self.predict(x_test)
         return accuracy_score(y_test,y_predict)
 
-
     def __repr__(self):
         #打印对象时调用或ipython解释器输入对象调用；__str__只有打印对象时调用
         return 'knn(k=%d)'%self.k
+
 # if __name__ == '__main__':
 #     from sklearn import datasets
 #     iris=datasets.load_iris()
